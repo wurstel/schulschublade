@@ -1,0 +1,30 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Schülerdaten ändern</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeLogin()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="doSave()">
+            <div class="list">
+
+                <label class="item item-input">
+                    <span class="input-label">Vorname</span>
+                    <input type="text" ng-model="item.first">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Nachname</span>
+                    <input type="text" ng-model="item.last">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Punkte</span>
+                    <input type="text" ng-model="item.points">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Speichern</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

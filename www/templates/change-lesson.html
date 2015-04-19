@@ -1,0 +1,38 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Unterrichtsstunde ändern</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeLogin()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="doSave()">
+            <div class="list">
+
+                <label class="item item-input">
+                    <span class="input-label">Thema</span>
+                    <input type="text" ng-model="item.topic">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Inhalt</span>
+                    <input type="text" ng-model="item.content">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Hausaufgaben</span>
+                    <input type="text" ng-model="item.exercises">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Quiz</span>
+                    <input type="text" ng-model="item.quizid">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Datum</span>
+                    <input type="date" ng-model="item.date">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Speichern</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

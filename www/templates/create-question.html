@@ -1,0 +1,28 @@
+<ion-view view-title="Frage erstellen">
+    <ion-content>
+        <br><br><br>
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Frage</span>
+                <input type="text" placeholder="Frage" ng-model="question.q">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Antwort</span>
+                <!--<input type="text" placeholder="Antwort" ng-model="question.a">-->
+                <div align="center">
+                <button class="button button-small button-assertive" ng-click="answer(false)">
+                    falsch
+                </button>
+                <button class="button button-small button-balanced" ng-click="answer(true)">
+                    wahr
+                </button>
+                </div>
+            </label>
+
+            <br>
+            <div class="button button-positive" ng-click="createQuestion()" align="center">Erstellen</div>
+
+        </div>
+
+    </ion-content>
+</ion-view>

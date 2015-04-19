@@ -1,0 +1,32 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Schüler hinzufügen</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeAdd()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="doAdd()">
+            <div class="list">
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Vorname</span>
+                    <input type="text" placeholder="Vorname" ng-model="pupil.first">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Nachname</span>
+                    <input type="text" placeholder="Nachname" ng-model="pupil.last">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Paswort</span>
+                    <input type="password" placeholder="Passwort" ng-model="pupil.password">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Hinzufügen</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>
+
+

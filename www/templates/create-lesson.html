@@ -1,0 +1,47 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Unterrichtsstunde erstellen</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeAdd()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="doAdd()">
+            <div class="list">
+
+                <!--<label class="item item-input item-stacked-label">
+                    <span class="input-label">Datum</span>
+                    <input type="date" ng-model="lesson.date">
+                </label>-->
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Thema</span>
+                    <input type="text" placeholder="Thema" ng-model="lesson.topic">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Inhalt</span>
+                    <input type="text" placeholder="Inhalt" ng-model="lesson.content">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Hausaufgaben</span>
+                    <input type="text" placeholder="Hausaufgaben" ng-model="lesson.exercises">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Quiz</span>
+                    <input type="text" placeholder="Quizname" ng-model="lesson.quizid">
+                </label>
+                <!--<label class="item item-input item-select">
+                    <div class="input-label">
+                        Quiz
+                    </div>
+                    <select ng-repeat="quiz in quizzes" ng-model="lesson.quizid">
+                        <option>quiz.name</option>
+                    </select>
+                </label>-->
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Erstellen</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>
+

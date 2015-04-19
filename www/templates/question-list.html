@@ -1,0 +1,57 @@
+<ion-view view-title="Fragen-Liste">
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-plus-round" ng-click="createQuestion()">
+
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+
+        <!--{{teacher}}
+        <br>
+        Quizno: {{quizno}}
+        <br>
+        Quiz:{{quiz}}
+        <br>
+        AllQ:{{allquestions}}
+        <br>
+        Qlist: {{qlist}}
+        <br>
+        Letztes:{{letztes}}-->
+        <div class="list card" ng-repeat="question in shownquestions" >
+            <div class="item item-divider"  >
+
+                <table style="width: 100%;vertical-align: middle">
+                    <tr>
+                        <td width="80%">
+                            <div >
+                                {{question.q}}
+                            </div>
+                        </td>
+                        <td width="20%" style="vertical-align: middle;text-align: right">
+
+                            <div class="button button-icon icon ion-close" ng-click="deleteQuestion(quiz.$id)"></div>
+                        </td>
+                    </tr>
+                </table>
+
+
+
+            </div>
+
+            <!--<div class="button button-positive" ng-click="showQuestion(quiz.$id)">öffnen</div>-->
+
+
+
+
+            <!--<div class="item item-body" >
+                <div>
+                    There is a fire in <b>sector 3</b>
+                </div>
+            </div>-->
+        </div>
+
+
+    </ion-content>
+</ion-view>

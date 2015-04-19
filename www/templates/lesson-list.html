@@ -1,0 +1,67 @@
+<ion-view view-title="Stundenübersicht">
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-plus" ng-click="createLesson()" ng-show="teacher">
+
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+
+        <div class="list card" ng-repeat="lesson in lessons | orderBy:'-date'" >
+
+
+                <div class="item item-divider" style="background-color: lightblue" >
+
+                    <table style="width: 100%;vertical-align: middle">
+                        <tr>
+                            <td width="80%" ng-click="showLesson(lesson.$id)">
+                                <div style="font-size: 1.2em;margin-top:13px">
+                                    {{lesson.topic}}
+                                </div>
+                            </td>
+                            <td width="20%" style="vertical-align: middle;text-align: right">
+
+                                <div class="button button-icon icon ion-close" ng-click="deleteLesson(lesson.$id)" ng-show=teacher></div>
+                                <div class="button button-icon icon ion-arrow-return-right" ng-click="changeLesson(lesson.$id)" ng-show=teacher></div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <!--<div class="item item-text-wrap">
+                    {{lesson.content}}
+                </div>-->
+                <div class="item item-divider">
+                    <table style="width: 100%;vertical-align: middle">
+                        <tr>
+                            <td width="80%">
+                                <div >
+                                    {{lesson.exercises}} <!--{{lesson.quizid}}-->
+                                </div>
+                            </td>
+                            <td width="20%" style="vertical-align: middle;text-align: right">
+
+                                {{lesson.date | date:'dd.MM.yy'}}
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+
+
+
+
+
+
+
+            <!--<div class="item item-body" >
+                <div>
+                    There is a fire in <b>sector 3</b>
+                </div>
+            </div>-->
+        </div>
+
+
+    </ion-content>
+</ion-view>

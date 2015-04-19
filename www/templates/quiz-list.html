@@ -1,0 +1,55 @@
+<ion-view view-title="Quiz-Liste">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-plus" ng-click="createQuiz()" ng-show="teacher">
+
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+
+        <div class="list card" ng-repeat="quiz in quizzes" style="background-color: lightblue;" >
+
+            <table style="width: 100%;" >
+                <tr>
+                    <td width="40%"  >
+                        <div class="item item-divider"  style="margin-top:5px;background-color: lightblue;font-size:1.4em" ng-click="questionlist(quiz.$id)">
+                            {{quiz.name}}
+                        </div>
+
+                    </td>
+
+                    <td width="40%" >
+
+                    </td>
+
+                    <td width="20%" style="vertical-align: middle;text-align: right">
+
+                        <div class="button button-icon icon ion-close" ng-click="deleteQuiz(quiz.$id)"></div>
+                        <!--<div class="button button-icon icon ion-arrow-return-right" ng-click="changePupil(pupil.$id)"></div>
+                        <div class="button button-icon icon ion-plus" ng-click="addPoints(pupil.$id)"></div>-->
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+
+
+            <!--<div class="button button-positive" ng-click="showQuiz(quiz.$id)">öffnen</div>-->
+
+           <!-- <div class="button button-positive" ng-click="questionlist(quiz.$id)">zu den Fragen</div>-->
+
+
+
+            <!--<div class="item item-body" >
+                <div>
+                    There is a fire in <b>sector 3</b>
+                </div>
+            </div>-->
+        </div>
+
+
+    </ion-content>
+</ion-view>

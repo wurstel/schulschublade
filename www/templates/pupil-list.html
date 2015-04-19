@@ -1,0 +1,58 @@
+<ion-view view-title="Schülerliste">
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-person-add" ng-click="createPupil()" ng-show="teacher">
+
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+<br>
+        <label class="item item-input item-select">
+            <div class="input-label">
+                Sortieren
+            </div>
+            <br>
+            <select ng-model="orderBy">
+                <option value="first" selected>Vorname</option>
+                <option value="last">Nachname</option>
+                <option value="-points">Punkte</option>
+            </select>
+        </label>
+
+        <div class="list card" ng-repeat="pupil in pupils | orderBy:orderBy" >
+            <div class="item item-divider"  style="background-color: lightgrey">
+
+            <table style="width: 100%;">
+                <tr>
+                    <td width="40%"  >
+                        <div style="margin-top: 13px;font-size: 1.3em">
+                            {{pupil.first}} {{pupil.last}}
+                        </div>
+
+                    </td>
+
+                    <td width="40%" >
+                        <div style="font-size: 1.3em">
+                        {{pupil.points}} <!--{{pupil.$id}}-->
+                        </div>
+                    </td>
+
+                    <td width="20%" style="vertical-align: middle;text-align: right">
+
+                        <div class="button button-icon icon ion-close" ng-click="deletePupil(pupil.$id)"></div>
+                        <div class="button button-icon icon ion-arrow-return-right" ng-click="changePupil(pupil.$id)"></div>
+                        <div class="button button-icon icon ion-plus" ng-click="addPoints(pupil.$id)"></div>
+
+                    </td>
+
+                </tr>
+
+            </table>
+            </div>
+
+
+        </div>
+
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,64 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-energized">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-positive">
+      <h1 class="title">Menü</h1>
+    </ion-header-bar>
+    <ion-content>
+
+
+      <ion-list>
+        <ion-item class="item-icon-left" nav-clear menu-close ng-click="login()">
+            <i class='icon ion-unlocked' ></i>Login
+        </ion-item>
+          <ion-item class="item-icon-left" nav-clear menu-close href="#/app/home">
+              <i class='icon ion-home' ></i>Home
+          </ion-item>
+          <ion-item class="item-icon-left" nav-clear menu-close href="#/app/pupil-account" ng-show=!teacher>
+              <i class='icon ion-gear-a'></i>Account
+          </ion-item>
+          <ion-item class="item-icon-left" nav-clear menu-close href="#/app/lesson-list">
+              <i class='icon ion-document-text'></i>Stundenübersicht
+          </ion-item>
+          <!--<ion-item nav-clear menu-close href="#/app/teacher" ng-show="teacher">
+              Lehrer
+          </ion-item>-->
+
+        <!--<ion-item nav-clear menu-close href="#/app/create-pupil" ng-show="teacher">
+          Schüler erstellen
+        </ion-item>-->
+        <ion-item class="item-icon-left" nav-clear menu-close href="#/app/pupil-list" ng-show="teacher">
+            <i class='icon ion-person-stalker'></i>Schülerliste
+        </ion-item>
+          <!--<ion-item nav-clear menu-close href="#/app/create-lesson" ng-show="teacher">
+              Unterrrichtsstunde erstellen
+          </ion-item>-->
+
+          <!--<ion-item nav-clear menu-close href="#/app/create-quiz" ng-show="teacher">
+              Quiz erstellen
+          </ion-item>
+          <ion-item nav-clear menu-close href="#/app/create-question" ng-show="teacher">
+              Frage erstellen
+          </ion-item>-->
+          <ion-item class="item-icon-left" nav-clear menu-close href="#/app/quiz-list" ng-show="teacher">
+              <i class='icon ion-help'></i>Quizzes
+          </ion-item>
+          <!--<ion-item nav-clear menu-close href="#/app/question-list" ng-show="teacher">
+              Frage-Liste
+          </ion-item>-->
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

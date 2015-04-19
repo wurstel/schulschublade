@@ -1,0 +1,96 @@
+<ion-view view-title="Unterrichtsstunde" ng-controller="LessonListCtrl">
+
+    <ion-nav-buttons side="right">
+        <!--<button class="button button-icon icon ion-close" ng-click="deleteLesson(lesson.$id)" ng-show="teacher">-->
+        <button class="button button-icon icon ion-arrow-return-right" ng-click="changeLesson(lesson.$id)" ng-show="teacher">
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+
+        <div class="list card" >
+
+
+            <div class="item item-divider" style="background-color: lightblue">
+
+                <table style="width: 100%;vertical-align: middle">
+                    <tr>
+                        <td width="80%">
+                            <div >
+                                {{lesson.topic}}
+                            </div>
+                        </td>
+                        <td width="20%" style="vertical-align: middle;text-align: right">
+
+                            {{lesson.date | date:'dd.MM.yy'}}
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="item item-text-wrap">
+                {{lesson.content}}
+            </div>
+
+
+            <div class="list card" >
+            <div class="item item-divider" ng-repeat="question in shownquestions" style="background-color: lightgrey">
+
+                <table style="width: 100%;vertical-align: middle">
+                    <tr>
+                        <td width="80%">
+                            <div >
+                                {{question.q}}
+                            </div>
+                        </td>
+                        <td width="20%" style="vertical-align: middle;text-align: right">
+
+                            <button class="button button-small button-assertive" ng-click="checkAnswer(question.$id,false)">
+                                <i class="icon ion-close-circled"></i>
+                            </button>
+                            <button class="button button-small button-balanced" ng-click="checkAnswer(question.$id,true)">
+                                <i class="icon ion-checkmark-circled"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+                </div>
+
+
+
+
+            <div class="item item-divider">
+                <table style="width: 100%;vertical-align: middle">
+                    <tr>
+                        <td width="80%">
+                            <div >
+                                HA: {{lesson.exercises}} <!--{{lesson.quizid}}-->
+                            </div>
+                        </td>
+                        <td width="20%" style="vertical-align: middle;text-align: right">
+
+
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+
+
+
+
+
+
+
+            <!--<div class="item item-body" >
+                <div>
+                    There is a fire in <b>sector 3</b>
+                </div>
+            </div>-->
+        </div>
+
+
+    </ion-content>
+</ion-view>

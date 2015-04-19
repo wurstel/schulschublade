@@ -1,0 +1,33 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Quiz erstellen</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeAdd()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="doAdd()">
+            <div class="list">
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Name</span>
+                    <input type="text" placeholder="Name" ng-model="quiz.name">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">ID</span>
+                    <input type="text" placeholder="ID" ng-model="quiz.id">
+                </label>
+
+                <br>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Erstellen</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>
+
+
+
+
+
