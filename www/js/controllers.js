@@ -58,7 +58,7 @@ angular.module('starter.controllers', [])
 .controller('HomeCtrl', function($scope, $rootScope) {
 
 
-        var getpData = function(){
+        /*var getpData = function(){
             //pData holen
             $scope.pData=[];
             if(localStorage.getItem("teacher") === null)  {
@@ -74,7 +74,7 @@ angular.module('starter.controllers', [])
 
             }
         };
-        getpData();
+        getpData();*/
 
 })
 
