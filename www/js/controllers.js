@@ -410,10 +410,12 @@ angular.module('starter.controllers', [])
 
 
         $scope.checkAnswer = function(id,answer){
-            console.log(answer);
+            console.log(answer.toString()+"toString");
             console.log("Antwort wird geprüft");
             console.log($scope.allquestions.$getRecord(id).a+" Frage");
-            if (answer.toString() == $scope.allquestions.$getRecord(id).a){
+            console.log(answer.toString() + $scope.allquestions.$getRecord(id).a);
+
+            if (answer == $scope.allquestions.$getRecord(id).a){
                 console.log("sehr gut");
 
                     // change a message and save it
@@ -674,9 +676,10 @@ angular.module('starter.controllers', [])
 
 
         $scope.deleteQuestion = function(id){
-            console.log(id);
+            console.log(id+" Question-ID");
             var ret = $scope.questions.$remove($scope.questions.$getRecord(id));
             console.log(ret);
+            location.reload();
         }
 
         $scope.showQuestion = function(id){
@@ -690,8 +693,13 @@ angular.module('starter.controllers', [])
         }
 
 
-        $scope.answer=function(answer){
-            $scope.question.a=answer;
+        $scope.answerFalse=function(){
+            $scope.question.a=false;
+            console.log($scope.question.a+" AnswerFalse")
+        }
+        $scope.answerTrue=function(){
+            $scope.question.a=true;
+            console.log($scope.question.a+" AnswerTrue")
         }
 
         // Create the login modal that we will use later
